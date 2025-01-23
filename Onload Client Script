@@ -1,0 +1,9 @@
+function onLoad() {
+    if (g_user.hasRoleExactly('itil')) {
+        g_form.setDisplay('state',true);
+        g_form.setSectionDisplay('related_records',true);
+    } else {
+        g_form.setDisplay('state',false);
+        g_form.setSectionDisplay('related_records',false);
+    }
+}
