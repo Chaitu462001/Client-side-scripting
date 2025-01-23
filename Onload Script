@@ -1,0 +1,14 @@
+function onLoad() {
+    if (g_form.isNewRecord()) {
+        g_form.setValue('caller_id', g_user.userID);
+        g_form.getReference('caller_id', populateCallerDetails);
+    }
+}
+
+function populateCallerDetails(caller) {
+    if (caller) {
+        g_form.setValue('u_email', caller.email);
+        g_form.setValue('u_location', caller.location);
+        g_form.setValue('u_department', caller.department);
+    }
+}
