@@ -3,6 +3,8 @@ function onSubmit() {
     var cat = g_form.getValue('field_name');
     var scat = g_form.getValue('field_name');
 
+    if(sta == 2){
+
     if (cat == '' || scat == '') {
 
         if (cat == '' && scat == '') {
@@ -20,3 +22,4 @@ function onSubmit() {
             }
 
         }
+}
