@@ -1,0 +1,34 @@
+Showing the errorbefore submission using field message:
+function onSubmit() {
+  var abc = g_form.getValue('u_vip');
+  var def = g_form.getValue('u_contractor');
+
+  if(abc != 'true' || def != 'true'){
+	g_form.showFieldMsg('u_vip','vip field is mandatory','error');
+	g_form.showFieldMsg('u_contractor','contractor field is mandatory','error');
+	return false;
+  }
+   
+}
+
+Showing the error before submission using add error message:
+function onSubmit() {
+  var abc = g_form.getValue('u_vip');
+  var def = g_form.getValue('u_contractor');
+
+  if(abc != 'true' || def != 'true'){
+	g_form.addErrorMessage('VIP and error fields are mandatory');
+	return false;
+  }
+
+Showing the error before submission using alert message:
+function onSubmit() {
+    var abc = g_form.getValue('u_vip');
+    var def = g_form.getValue('u_contractor');
+
+    if (abc != 'true' || def != 'true') {
+        alert('VIP and Contractor fields are mandatorty');
+        return false;
+    }
+
+}
