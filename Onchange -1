@@ -1,0 +1,13 @@
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    var chay = g_form.getReference('caller_id', getcallerdetails);
+
+    function getcallerdetails(chay) {
+        g_form.setValue('u_department', chay.department);
+        g_form.setValue('u_location', chay.location);
+    }
+
+}
